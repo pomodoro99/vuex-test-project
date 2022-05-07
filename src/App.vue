@@ -1,12 +1,34 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <!-- <MonitorView></MonitorView><br>
+    <ControllerView></ControllerView> -->
+    <!-- <InputView></InputView> -->
+
+    <!-- If using vue-router -->
+    <router-view></router-view>
+    <br>
+    <router-link to="/info">Info</router-link> &nbsp;
+    <router-link to="/">Home</router-link>
+
   </div>
+
 </template>
+
+<script>
+//import { defineComponent } from '@vue/composition-api'
+// import ControllerView from '@/views/ControllerView.vue'
+// import MonitorView from '@/views/MonitorView.vue'
+// import InputView from '@/views/InputView.vue'
+
+export default ({
+  components: {
+    // ControllerView,
+    // MonitorView,
+    // InputView
+  }
+
+})
+</script>
 
 <style>
 #app {
