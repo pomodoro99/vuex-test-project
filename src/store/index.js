@@ -49,7 +49,10 @@ export default new Vuex.Store({
           tmp = num1 * num2;
           break;
         case "/":
-          tmp = num1 / num2;
+          if (num2 == 0)
+            tmp = "계산불가"
+          else
+            tmp = num1 / num2;
           break;
       }
       state.result = tmp
