@@ -1,22 +1,76 @@
 <template>
-  <div>
-    <input
-      type="number"
-      v-model="num1"
-    >&nbsp;
-    <input
-      type="number"
-      v-model="num2"
-    >
+  <v-container>
+    <v-row>
+      <v-col
+        cols="12"
+        sm="1"
+      ></v-col>
+      <v-col
+        cols="12"
+        sm="5"
+      >
+        <v-text-field
+          type="number"
+          v-model="num1"
+        ></v-text-field>
+      </v-col>
+      <v-col
+        cols="12"
+        sm="5"
+      >
+        <v-text-field
+          type="number"
+          v-model="num2"
+        ></v-text-field>
+      </v-col>
+    </v-row>
     <!-- <button @click="increase(1)">증가</button>
     <button @click="decrease(-1)">감소</button> -->
-    <br><br>
-    <button @click="calculate('+')">+</button>
-    <button @click="calculate('-')">-</button>
-    <button @click="calculate('*')">*</button>
-    <button @click="calculate('/')">/</button>
-
-  </div>
+    <v-row>
+      <v-col cols="12">
+        <v-btn
+          class="mx-2"
+          fab
+          dark
+          small
+          color="primary"
+          @click="calculate('+')"
+        >
+          <v-icon dark>mdi-plus</v-icon>
+        </v-btn>
+        <v-btn
+          class="mx-2"
+          fab
+          dark
+          small
+          color="primary"
+          @click="calculate('-')"
+        >
+          <v-icon dark>mdi-minus</v-icon>
+        </v-btn>
+        <v-btn
+          class="mx-2"
+          fab
+          dark
+          small
+          color="primary"
+          @click="calculate('*')"
+        >
+          <v-icon dark>mdi-close</v-icon>
+        </v-btn>
+        <v-btn
+          class="mx-2"
+          fab
+          dark
+          small
+          color="primary"
+          @click="calculate('/')"
+        >
+          <v-icon dark>mdi-division</v-icon>
+        </v-btn>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {    //data 영역, 전역데이터, 유지보수 차원에서 데이터 넘기는 좋은 방법은 아님
-    title: 'test',
+    title: '',
     count: 0,
     result: 0    //사칙연산 결과
   },
@@ -56,11 +56,12 @@ export default new Vuex.Store({
           break;
       }
       state.result = tmp
-    }
+    },
 
-    // setTitle (state, text) {
-    //   this.title = text;
-    // },
+    setTitle (state, text) {
+      console.log("title-" + text)
+      state.title = text;
+    },
 
     // setName (state, text) {
     //   state.name = text
